@@ -13,8 +13,11 @@ create = params.create_bigrams # true to compute and store bigrams to disk
 # false to go through top N bigrams and create annotations
 
 print('Loading dataset.')
-DATASET = params.dataset
-dataset = utils.Layer.merge([utils.Layer.L1, utils.Layer.L2, utils.Layer.INGRS],DATASET)
+# DATASET = params.dataset
+# dataset = utils.Layer.merge([utils.Layer.L1, utils.Layer.L2, utils.Layer.INGRS],DATASET)
+with open('/home/ubuntu/filestore/keshav/im2recipe/data/im2recipe_myntra_full_data.pickle', 'rb') as handle:
+    dataset = pickle.load(handle)
+
 
 if create:
     print("Creating bigrams...")
