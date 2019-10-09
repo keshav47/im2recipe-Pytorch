@@ -19,10 +19,10 @@ def get_parser():
 
     # new dataset 1M
     parser.add_argument('-f101_cats',   dest='f101_cats',       default = '../data/food101_classes_renamed.txt')
-    parser.add_argument('-vocab',       dest='vocab',           default = '../data/text/vocab.txt')
+    parser.add_argument('-vocab',       dest='vocab',           default = '/home/ubuntu/filestore/keshav/im2recipe/data/im2recipe_myntra_vocab.txt')
     parser.add_argument('-stvecs',      dest='stvecs',          default = '../data/text/')
     parser.add_argument('-dataset',     dest='dataset',         default = '../data/recipe1M/')
-    parser.add_argument('-suffix',      dest='suffix',          default = '1M')
+    parser.add_argument('-suffix',      dest='suffix',          default = 'myntra')
     parser.add_argument('-h5_data',     dest='h5_data',         default = '../data/data.h5')
     parser.add_argument('-logfile',     dest='logfile',         default = '')
     parser.add_argument('--nocrtbgrs',  dest='create_bigrams',  action='store_false')

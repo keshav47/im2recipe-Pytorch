@@ -44,8 +44,8 @@ if create:
     bgs = nltk.bigrams(tokens)
     #compute frequency distribution for all the bigrams in the text
     fdist = nltk.FreqDist(bgs)
-
-    pickle.dump(fdist,open('../data/bigrams'+params.suffix+'.pkl','wb'))
+    # pickle.dump(fdist,open('../data/bigrams'+params.suffix+'.pkl','wb'))
+    pickle.dump(fdist,open('/home/ubuntu/filestore/keshav/im2recipe/data/im2recipe_myntra_bigrams.pkl','wb'))
 
 else:
     N = 2000
