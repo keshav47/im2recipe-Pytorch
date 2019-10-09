@@ -6,9 +6,9 @@ import os
 '''
 Usage: python get_vocab.py /path/to/vocab.bin
 '''
-w2v_file = "/home/ubuntu/filestore/keshav/im2recipe/data"
+w2v_file = "/home/ubuntu/filestore/keshav/im2recipe/data/im2recipe_myntra_vocab.bin"
 # model = word2vec.load(w2v_file)
-model = fasttext.load_model(w2v_file + "/im2recipe_myntra_vocab.bin")
+model = fasttext.load_model(w2v_file)
 vocab =  model.words
 
 print("Writing to %s..." % os.path.join(os.path.dirname(w2v_file),'vocab.txt'))
